@@ -25,6 +25,7 @@ public class Demo2PlayerController : MonoBehaviour
     private Transform _spriteRoot;
 
     public Vector2 Position => _rb != null ? _rb.position : (Vector2)transform.position;
+    public Vector2 Velocity => _velocity;
     public bool IsMoving => _velocity.sqrMagnitude > 0.1f;
 
     private void Awake()

@@ -37,6 +37,7 @@ public class Demo2Setup : MonoBehaviour
         CreatePlayer();
         SpawnItems();
         CreateUI();
+        StartItemSpawner();
     }
 
     // ──────────────── Camera ────────────────
@@ -140,6 +141,7 @@ public class Demo2Setup : MonoBehaviour
         rb.gravityScale = 0f;
         rb.freezeRotation = true;
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+        rb.interpolation = RigidbodyInterpolation2D.Interpolate;
 
         // Collider（碰牆壁用）
         var col = playerGo.AddComponent<CircleCollider2D>();
@@ -272,6 +274,17 @@ public class Demo2Setup : MonoBehaviour
             var collectible = go.AddComponent<Collectible>();
             collectible.Init(entry, spriteRoot.transform);
         }
+    }
+
+    // ──────────────── Item Spawner ────────────────
+
+    private void StartItemSpawner()
+    {
+        var spawnerGo = new GameObject("ItemSpawner");
+        var spawner = spawnerGo.AddComponent<ItemSpawner>();
+        spawner.Init(arenaWidth, arenaHeight,
+            CreateCircleSprite(32), CreateDiamondSprite(), CreateSquareSprite(),
+            spawnInterval: 4f, maxItems: 30);
     }
 
     // ──────────────── UI ────────────────

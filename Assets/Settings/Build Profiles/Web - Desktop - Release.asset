@@ -28,6 +28,8 @@ MonoBehaviour:
     m_path: Assets/Scenes/Shader.unity
   - m_enabled: 0
     m_path: Assets/Scenes/TalkBotDemo.unity
+  - m_enabled: 0
+    m_path: Assets/Scenes/Demo2.unity
   m_HasScriptingDefines: 0
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:

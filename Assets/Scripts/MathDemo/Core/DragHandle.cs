@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 
 // ============================================================
 // DragHandle.cs
 // 3D 可拖曳控制點 — 滑鼠拖曳到指定平面上
 // 使用 New Input System（Mouse.current）進行射線互動
+// 手動追蹤按鍵狀態，避免 WebGL 的 wasPressedThisFrame 不可靠問題
 // ============================================================
 
 public class DragHandle : MonoBehaviour
@@ -24,6 +26,9 @@ public class DragHandle : MonoBehaviour
     private Renderer rend;
     private Color baseColor;
     private Color hoverColor;
+
+    // 手動追蹤滑鼠按鍵狀態（WebGL 相容）
+    private bool _prevLeftDown;
 
     // 位置改變事件
     public System.Action<Vector3> onPositionChanged;
@@ -45,6 +50,11 @@ public class DragHandle : MonoBehaviour
             rb.isKinematic = true;
             rb.useGravity = false;
         }
+
+        // 確保碰撞器夠大方便點擊
+        var sphereCol = GetComponent<SphereCollider>();
+        if (sphereCol != null && sphereCol.radius < 0.5f)
+            sphereCol.radius = 0.5f;
     }
 
     public void SetInteractable(bool value)
@@ -64,6 +74,21 @@ public class DragHandle : MonoBehaviour
         var mouse = Mouse.current;
         if (mouse == null) return;
 
+        bool leftDown = mouse.leftButton.isPressed;
+        bool justPressed = leftDown && !_prevLeftDown;
+        bool justReleased = !leftDown && _prevLeftDown;
+        _prevLeftDown = leftDown;
+
+        // 如果滑鼠在 UI 上，不處理 3D 互動
+        if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
+        {
+            if (!isDragging)
+            {
+                if (isHovered) SetHover(false);
+                return;
+            }
+        }
+
         Vector2 mousePos = mouse.position.ReadValue();
         Ray ray = mainCam.ScreenPointToRay(mousePos);
         // QueryTriggerInteraction.Ignore 避免 ExhibitTrigger 的 BoxCollider(isTrigger) 擋截射線
@@ -77,8 +102,8 @@ public class DragHandle : MonoBehaviour
         else if (!hitSelf && !isDragging && isHovered)
             SetHover(false);
 
-        // 開始拖曳
-        if (hitSelf && mouse.leftButton.wasPressedThisFrame)
+        // 開始拖曳 — 使用手動狀態追蹤代替 wasPressedThisFrame
+        if (hitSelf && justPressed)
         {
             isDragging = true;
             dragDepth = mainCam.WorldToScreenPoint(transform.position).z;
@@ -115,8 +140,8 @@ public class DragHandle : MonoBehaviour
             onPositionChanged?.Invoke(localPos);
         }
 
-        // 結束拖曳
-        if (isDragging && mouse.leftButton.wasReleasedThisFrame)
+        // 結束拖曳 — 使用手動狀態追蹤代替 wasReleasedThisFrame
+        if (isDragging && justReleased)
         {
             EndDrag();
         }
