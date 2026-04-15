@@ -1,0 +1,83 @@
+# ──────────────── Unity 標準忽略 ────────────────
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+UserSettings/
+MemoryCaptures/
+[Ll]ogs/
+ProfilerCaptures/
+
+**/Assets/AssetStoreTools
+/Assets/Plugins/PlasticSCM*
+
+*.private
+*.private.meta
+
+# IDE
+.vs/
+.vscode/
+.idea/
+.gradle/
+ExportedObj/
+.consulo/
+
+# 自動生成
+*.csproj
+*.unityproj
+*.sln
+*.slnx
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# 系統
+sysinfo.txt
+crashlytics-build.properties
+~UnityDirMonSyncFile~*
+.DS_Store*
+Thumbs.db
+Desktop.ini
+
+# 建置產物
+*.apk
+*.aab
+*.app
+*.unitypackage
+Output/**/*.zip
+
+# Addressables
+**/Assets/AddressableAssetsData/*/*.bin*
+**/Assets/StreamingAssets/aa.meta
+
+# ──────────────── 敏感資料（API Key / 金鑰）────────────────
+Assets/google-services.json
+Assets/google-services.json.meta
+Assets/StreamingAssets/firebase-config.json
+Assets/StreamingAssets/firebase-config.json.meta
+Assets/StreamingAssets/google-services-desktop.json
+Assets/StreamingAssets/google-services-desktop.json.meta
+Assets/Scripts/TalkDemo/Config/ApiConfig.asset
+Assets/Scripts/TalkDemo/Config/ApiConfig.asset.meta
+Assets/Scripts/TalkDemo/Supabase Config.asset
+Assets/Scripts/TalkDemo/Supabase Config.asset.meta
+
+# ──────────────── 大型二進位 / 可還原 ────────────────
+Assets/Firebase/
+Assets/Firebase.meta
+Assets/ExternalDependencyManager/
+Assets/ExternalDependencyManager.meta
+Assets/Plugins/
+Assets/Plugins.meta

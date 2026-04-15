@@ -1,0 +1,60 @@
+{
+  "chapters": [
+    {
+      "id": "chapter_0",
+      "triggerAfterQuest": 0,
+      "dialogues": [
+        {
+          "speaker": "艦長",
+          "portrait": "captain",
+          "text": "全體注意，我們已經抵達目標星域。"
+        },
+        {
+          "speaker": "艦長",
+          "portrait": "captain",
+          "text": "根據總部的指示，我們需要在這片區域搜尋適合人類居住的行星。"
+        },
+        {
+          "speaker": "通訊員",
+          "portrait": "operator",
+          "text": "了解，望遠鏡系統已就緒，可以開始觀測。"
+        }
+      ],
+      "onComplete": "openStarMap"
+    },
+    {
+      "id": "chapter_1",
+      "triggerAfterQuest": 1,
+      "dialogues": [
+        {
+          "speaker": "通訊員",
+          "portrait": "operator",
+          "text": "報告艦長，第一顆目標行星的掃描數據已經回傳。"
+        },
+        {
+          "speaker": "艦長",
+          "portrait": "captain",
+          "text": "很好，繼續搜索下一個目標。"
+        }
+      ],
+      "onComplete": "openStarMap"
+    },
+    {
+      "id": "chapter_2",
+      "triggerAfterQuest": 2,
+      "dialogues": [
+        {
+          "speaker": "艦長",
+          "portrait": "captain",
+          "text": "目前的進展不錯，已經完成兩顆行星的觀測。"
+        },
+        {
+          "speaker": "通訊員",
+          "portrait": "operator",
+          "text": "接下來的目標似乎在另一個象限，需要調整觀測方向。"
+        }
+      ],
+      "onComplete": "openStarMap"
+    }
+  ]
+}

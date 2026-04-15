@@ -1,0 +1,509 @@
+{
+  "starSystems": [
+    {
+      "name": "GEVURAH",
+      "quadrant": 1,
+      "center": {
+        "x": 25,
+        "y": 75
+      },
+      "radius": 18
+    },
+    {
+      "name": "TIFERET",
+      "quadrant": 2,
+      "center": {
+        "x": 75,
+        "y": 75
+      },
+      "radius": 18
+    },
+    {
+      "name": "CHESED",
+      "quadrant": 3,
+      "center": {
+        "x": 25,
+        "y": 25
+      },
+      "radius": 18
+    },
+    {
+      "name": "BINAH",
+      "quadrant": 4,
+      "center": {
+        "x": 75,
+        "y": 25
+      },
+      "radius": 18
+    }
+  ],
+  "planets": [
+    {
+      "id": "EMETH-100",
+      "defaultName": "Nono_01",
+      "description": "此行星表面溫度過高，液態水無法存在。",
+      "position": {
+        "x": 34.89,
+        "y": 65.96
+      },
+      "scale": 0.32,
+      "radius": 4118,
+      "mass": 29182,
+      "temperature": 92,
+      "waterPercent": 69,
+      "earthSimilarity": 13.89,
+      "isQuestTarget": true,
+      "filterOnly": false,
+      "questOrder": 1
+    },
+    {
+      "id": "EMETH-101",
+      "defaultName": "Manon_01",
+      "description": "此行星表面溫度過高，液態水無法存在。",
+      "position": {
+        "x": 26.2,
+        "y": 75.87
+      },
+      "scale": 0.43,
+      "radius": 3505,
+      "mass": 13994,
+      "temperature": -43,
+      "waterPercent": 89,
+      "earthSimilarity": 93.88,
+      "isQuestTarget": true,
+      "filterOnly": true,
+      "questOrder": 2
+    },
+    {
+      "id": "EMETH-102",
+      "defaultName": "",
+      "description": "",
+      "position": {
+        "x": 25.48,
+        "y": 74.92
+      },
+      "scale": 0.41,
+      "radius": 6735,
+      "mass": 23068,
+      "temperature": -37,
+      "waterPercent": 56,
+      "earthSimilarity": 11.92,
+      "isQuestTarget": false,
+      "filterOnly": true
+    },
+    {
+      "id": "EMETH-103",
+      "defaultName": "",
+      "description": "",
+      "position": {
+        "x": 15.97,
+        "y": 72.85
+      },
+      "scale": 0.21,
+      "radius": 4642,
+      "mass": 14298,
+      "temperature": -5,
+      "waterPercent": 100,
+      "earthSimilarity": 71.69,
+      "isQuestTarget": false,
+      "filterOnly": true
+    },
+    {
+      "id": "EMETH-104",
+      "defaultName": "",
+      "description": "",
+      "position": {
+        "x": 20.07,
+        "y": 86.27
+      },
+      "scale": 0.38,
+      "radius": 3274,
+      "mass": 16451,
+      "temperature": -68,
+      "waterPercent": 70,
+      "earthSimilarity": 83.09,
+      "isQuestTarget": false,
+      "filterOnly": false
+    },
+    {
+      "id": "EMETH-105",
+      "defaultName": "",
+      "description": "",
+      "position": {
+        "x": 33.01,
+        "y": 73.88
+      },
+      "scale": 0.16,
+      "radius": 3839,
+      "mass": 21326,
+      "temperature": 68,
+      "waterPercent": 35,
+      "earthSimilarity": 41.72,
+      "isQuestTarget": false,
+      "filterOnly": true
+    },
+    {
+      "id": "EMETH-106",
+      "defaultName": "",
+      "description": "",
+      "position": {
+        "x": 21.9,
+        "y": 78.44
+      },
+      "scale": 0.22,
+      "radius": 7889,
+      "mass": 19871,
+      "temperature": 110,
+      "waterPercent": 20,
+      "earthSimilarity": 19.0,
+      "isQuestTarget": false,
+      "filterOnly": false
+    },
+    {
+      "id": "EMETH-107",
+      "defaultName": "",
+      "description": "",
+      "position": {
+        "x": 27.3,
+        "y": 76.27
+      },
+      "scale": 0.33,
+      "radius": 12576,
+      "mass": 29223,
+      "temperature": -32,
+      "waterPercent": 71,
+      "earthSimilarity": 23.05,
+      "isQuestTarget": false,
+      "filterOnly": true
+    },
+    {
+      "id": "EMETH-108",
+      "defaultName": "OtherWorld_0",
+      "description": "此行星表面溫度過高，液態水無法存在。",
+      "position": {
+        "x": 81.48,
+        "y": 61.37
+      },
+      "scale": 0.21,
+      "radius": 4373,
+      "mass": 8634,
+      "temperature": 20,
+      "waterPercent": 70,
+      "earthSimilarity": 48.71,
+      "isQuestTarget": true,
+      "filterOnly": false,
+      "questOrder": 3
+    },
+    {
+      "id": "EMETH-109",
+      "defaultName": "Sahara_01",
+      "description": "此行星表面溫度過高，液態水無法存在。",
+      "position": {
+        "x": 69.17,
+        "y": 80.5
+      },
+      "scale": 0.27,
+      "radius": 12537,
+      "mass": 5422,
+      "temperature": -63,
+      "waterPercent": 91,
+      "earthSimilarity": 37.88,
+      "isQuestTarget": true,
+      "filterOnly": true,
+      "questOrder": 4
+    },
+    {
+      "id": "EMETH-110",
+      "defaultName": "",
+      "description": "",
+      "position": {
+        "x": 75.05,
+        "y": 77.54
+      },
+      "scale": 0.22,
+      "radius": 4358,
+      "mass": 26018,
+      "temperature": -51,
+      "waterPercent": 87,
+      "earthSimilarity": 25.72,
+      "isQuestTarget": false,
+      "filterOnly": true
+    },
+    {
+      "id": "EMETH-111",
+      "defaultName": "",
+      "description": "",
+      "position": {
+        "x": 79.86,
+        "y": 72.62
+      },
+      "scale": 0.46,
+      "radius": 7171,
+      "mass": 28791,
+      "temperature": 83,
+      "waterPercent": 36,
+      "earthSimilarity": 75.29,
+      "isQuestTarget": false,
+      "filterOnly": false
+    },
+    {
+      "id": "EMETH-112",
+      "defaultName": "",
+      "description": "",
+      "position": {
+        "x": 75.53,
+        "y": 74.94
+      },
+      "scale": 0.39,
+      "radius": 9466,
+      "mass": 20749,
+      "temperature": -27,
+      "waterPercent": 7,
+      "earthSimilarity": 16.43,
+      "isQuestTarget": false,
+      "filterOnly": false
+    },
+    {
+      "id": "EMETH-113",
+      "defaultName": "",
+      "description": "",
+      "position": {
+        "x": 76.46,
+        "y": 75.26
+      },
+      "scale": 0.19,
+      "radius": 9505,
+      "mass": 20100,
+      "temperature": 115,
+      "waterPercent": 33,
+      "earthSimilarity": 25.15,
+      "isQuestTarget": false,
+      "filterOnly": false
+    },
+    {
+      "id": "EMETH-114",
+      "defaultName": "Menou_01",
+      "description": "此行星處於宜居帶邊緣，水分含量極高。",
+      "position": {
+        "x": 27.29,
+        "y": 29.74
+      },
+      "scale": 0.43,
+      "radius": 7978,
+      "mass": 2448,
+      "temperature": 108,
+      "waterPercent": 66,
+      "earthSimilarity": 40.28,
+      "isQuestTarget": true,
+      "filterOnly": false,
+      "questOrder": 5
+    },
+    {
+      "id": "EMETH-115",
+      "defaultName": "Michelle_01",
+      "description": "此行星質量過大，地表重力不適合人類活動。",
+      "position": {
+        "x": 29.05,
+        "y": 22.15
+      },
+      "scale": 0.17,
+      "radius": 6530,
+      "mass": 23156,
+      "temperature": -50,
+      "waterPercent": 78,
+      "earthSimilarity": 28.47,
+      "isQuestTarget": true,
+      "filterOnly": true,
+      "questOrder": 6
+    },
+    {
+      "id": "EMETH-116",
+      "defaultName": "",
+      "description": "",
+      "position": {
+        "x": 25.31,
+        "y": 31.59
+      },
+      "scale": 0.5,
+      "radius": 13175,
+      "mass": 16624,
+      "temperature": -51,
+      "waterPercent": 26,
+      "earthSimilarity": 20.95,
+      "isQuestTarget": false,
+      "filterOnly": true
+    },
+    {
+      "id": "EMETH-117",
+      "defaultName": "",
+      "description": "",
+      "position": {
+        "x": 22.83,
+        "y": 38.28
+      },
+      "scale": 0.15,
+      "radius": 8547,
+      "mass": 3907,
+      "temperature": -38,
+      "waterPercent": 35,
+      "earthSimilarity": 22.57,
+      "isQuestTarget": false,
+      "filterOnly": true
+    },
+    {
+      "id": "EMETH-118",
+      "defaultName": "",
+      "description": "",
+      "position": {
+        "x": 38.62,
+        "y": 19.07
+      },
+      "scale": 0.28,
+      "radius": 13747,
+      "mass": 21160,
+      "temperature": -44,
+      "waterPercent": 25,
+      "earthSimilarity": 18.84,
+      "isQuestTarget": false,
+      "filterOnly": true
+    },
+    {
+      "id": "EMETH-119",
+      "defaultName": "",
+      "description": "",
+      "position": {
+        "x": 23.42,
+        "y": 29.83
+      },
+      "scale": 0.3,
+      "radius": 4871,
+      "mass": 8530,
+      "temperature": -46,
+      "waterPercent": 71,
+      "earthSimilarity": 34.07,
+      "isQuestTarget": false,
+      "filterOnly": false
+    },
+    {
+      "id": "EMETH-120",
+      "defaultName": "Momo_01",
+      "description": "此行星表面溫度過高，液態水無法存在。",
+      "position": {
+        "x": 69.61,
+        "y": 14.7
+      },
+      "scale": 0.44,
+      "radius": 5306,
+      "mass": 16677,
+      "temperature": 39,
+      "waterPercent": 78,
+      "earthSimilarity": 43.96,
+      "isQuestTarget": true,
+      "filterOnly": false,
+      "questOrder": 7
+    },
+    {
+      "id": "EMETH-121",
+      "defaultName": "Gadouran_01",
+      "description": "此行星無法接收到充足的日照能量，不適宜人類生存。",
+      "position": {
+        "x": 70.6,
+        "y": 19.78
+      },
+      "scale": 0.29,
+      "radius": 5944,
+      "mass": 5812,
+      "temperature": 17,
+      "waterPercent": 73,
+      "earthSimilarity": 39.88,
+      "isQuestTarget": true,
+      "filterOnly": true,
+      "questOrder": 8
+    },
+    {
+      "id": "EMETH-122",
+      "defaultName": "",
+      "description": "",
+      "position": {
+        "x": 81.59,
+        "y": 15.78
+      },
+      "scale": 0.47,
+      "radius": 9496,
+      "mass": 26086,
+      "temperature": 102,
+      "waterPercent": 96,
+      "earthSimilarity": 76.08,
+      "isQuestTarget": false,
+      "filterOnly": false
+    },
+    {
+      "id": "EMETH-123",
+      "defaultName": "",
+      "description": "",
+      "position": {
+        "x": 69.21,
+        "y": 21.74
+      },
+      "scale": 0.33,
+      "radius": 9438,
+      "mass": 24504,
+      "temperature": 9,
+      "waterPercent": 30,
+      "earthSimilarity": 23.85,
+      "isQuestTarget": false,
+      "filterOnly": false
+    },
+    {
+      "id": "EMETH-124",
+      "defaultName": "",
+      "description": "",
+      "position": {
+        "x": 77.77,
+        "y": 32.29
+      },
+      "scale": 0.44,
+      "radius": 8588,
+      "mass": 26196,
+      "temperature": 110,
+      "waterPercent": 89,
+      "earthSimilarity": 85.72,
+      "isQuestTarget": false,
+      "filterOnly": true
+    },
+    {
+      "id": "EMETH-125",
+      "defaultName": "",
+      "description": "",
+      "position": {
+        "x": 76.7,
+        "y": 25.91
+      },
+      "scale": 0.42,
+      "radius": 5085,
+      "mass": 15929,
+      "temperature": -3,
+      "waterPercent": 0,
+      "earthSimilarity": 19.78,
+      "isQuestTarget": false,
+      "filterOnly": true
+    },
+    {
+      "id": "EMETH-126",
+      "defaultName": "",
+      "description": "",
+      "position": {
+        "x": 78.86,
+        "y": 23.1
+      },
+      "scale": 0.34,
+      "radius": 9995,
+      "mass": 14506,
+      "temperature": 10,
+      "waterPercent": 60,
+      "earthSimilarity": 63.25,
+      "isQuestTarget": false,
+      "filterOnly": false
+    }
+  ]
+}

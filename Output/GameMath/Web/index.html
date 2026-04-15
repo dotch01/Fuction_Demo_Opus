@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuction_Demo</title>
+    <style>
+        * { margin: 0; padding: 0; }
+        html, body { width: 100%; height: 100%; overflow: hidden; background: #1a1a2e; }
+        #unity-container { width: 100%; height: 100%; }
+        #unity-canvas { width: 100%; height: 100%; background: #0a0a14; }
+        #loading-cover {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            display: flex; justify-content: center; align-items: center;
+            background: #0a0a14; z-index: 100;
+        }
+        #loading-cover .progress { width: 300px; height: 6px; background: #222; border-radius: 3px; }
+        #loading-cover .fill { height: 100%; background: #4a9eff; border-radius: 3px; width: 0%; transition: width 0.2s; }
+        #loading-cover p { color: #888; margin-top: 16px; font-family: sans-serif; font-size: 14px; }
+    </style>
+
+    <!-- Firebase JS SDK (compat mode for jslib interop) -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    <div id="unity-container">
+        <canvas id="unity-canvas" tabindex="-1"></canvas>
+    </div>
+    <div id="loading-cover">
+        <div style="text-align:center">
+            <div class="progress"><div class="fill" id="progress-fill"></div></div>
+            <p id="loading-text">載入中...</p>
+        </div>
+    </div>
+
+    <script>
+        var buildUrl = "Build";
+        var loaderUrl = buildUrl + "/Web.loader.js";
+
+        var config = {
+            dataUrl: buildUrl + "/Web.data",
+            frameworkUrl: buildUrl + "/Web.framework.js",
+            codeUrl: buildUrl + "/Web.wasm",
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "DefaultCompany",
+            productName: "Fuction_Demo",
+            productVersion: "0.1.0",
+            // 讓 WebGL 本地存檔自動同步到 IndexedDB，重新整理後不遺失
+            autoSyncPersistentDataPath: true,
+        };
+
+        var script = document.createElement("script");
+        script.src = loaderUrl;
+        script.onload = function () {
+            createUnityInstance(document.querySelector("#unity-canvas"), config, function (progress) {
+                document.getElementById("progress-fill").style.width = (progress * 100) + "%";
+            }).then(function (instance) {
+                document.getElementById("loading-cover").style.display = "none";
+            }).catch(function (message) {
+                document.getElementById("loading-text").innerText = message;
+            });
+        };
+        document.body.appendChild(script);
+    </script>
+</body>
+</html>

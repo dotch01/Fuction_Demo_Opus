@@ -1,0 +1,52 @@
+{
+  "scenes": [
+    {
+      "id": "spaceship",
+      "objects": [
+        {
+          "objectId": "console",
+          "label": "控制台",
+          "posX": -300,
+          "posY": 0,
+          "width": 120,
+          "height": 120,
+          "colorR": 0.3,
+          "colorG": 0.4,
+          "colorB": 0.6,
+          "dialogues": [
+            { "speaker": "系統", "portrait": "", "text": "控制台運作正常，所有系統綠燈。" }
+          ]
+        },
+        {
+          "objectId": "window",
+          "label": "觀測窗",
+          "posX": 0,
+          "posY": 50,
+          "width": 200,
+          "height": 150,
+          "colorR": 0.1,
+          "colorG": 0.15,
+          "colorB": 0.3,
+          "dialogues": [
+            { "speaker": "系統", "portrait": "", "text": "窗外是無盡的星海..." },
+            { "speaker": "系統", "portrait": "", "text": "也許該用望遠鏡仔細觀察一下。" }
+          ]
+        },
+        {
+          "objectId": "comms",
+          "label": "通訊設備",
+          "posX": 300,
+          "posY": 0,
+          "width": 100,
+          "height": 100,
+          "colorR": 0.5,
+          "colorG": 0.3,
+          "colorB": 0.3,
+          "dialogues": [
+            { "speaker": "通訊員", "portrait": "operator", "text": "通訊頻道暢通，等待總部進一步指示。" }
+          ]
+        }
+      ]
+    }
+  ]
+}
